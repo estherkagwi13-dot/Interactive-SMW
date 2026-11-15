@@ -35,11 +35,11 @@ function displayStudents(listToShow=students){
             <td>${s.course}</td>
             <td>${s.marks}</td>
             <td>${getPerformance(s.marks)}</td>
+             <td><button onclick="updateMarks(${s.id})">Update</button></td>
             <td><button onclick="deleteStudent(${s.id})">Delete</button></td>
-            <td><button onclick="updateMarks(${s.id})">Update</button></td>
         </tr>`
     }
-//update button check later , records stoped working everything
+
     if(students.length===0){
         noRecords.style.display="block";
     }
