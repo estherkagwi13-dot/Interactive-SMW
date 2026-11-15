@@ -4,15 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css"
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+        <p>Welcome to the student Managment System!</p>
+
+        <div class="statistics">
+            <div class="statistics-box">
+                <span id="total-students">0</span>
+                <p>Total students</p>
+            </div>
+
+            <div class="statistics-box">
+                <span id="total-passed">0</span>
+                <p>Passed</p>
+            </div>
+
+            <div class="statistics-box">
+                <span id="total-failed">0</span>
+                <p>Failed</p>
+            </div>
+
+            <div class="statistics-box">
+                <span id="average-marks">0</span>
+                <p>Average Marks</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Records-->
+    <section id="records">
+        <h2>Students Records</h2>
+
+        <div id="search-area">
+            <input type="text" id="search-input" placeholder="search Student by name...">
+            <button id="search-button">Search</button>
+            <button id="clear-button">Show all</button>
+        </div>
+
+        <p id="search-message>"></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Course</th>
+                    <th>Marks</th>
+                    <th>Performance</th>
+                </tr>
+            </thead>
+            <tbody id="records-body"></tbody>
+        </table>
+
+        <p id="no-records">No Students Registered yet</p>
+        
+    </section>
     <!-- 
  A dashboard displaying a welcome message and student statistics.
  A student registration form.
- A student records section displaying registered students.
- A student search feature.
- A student performance summary
+ 
     -->
  <section id="registration">
     <h2> Register A Student</h2>
@@ -51,6 +106,7 @@
  </section>
  <!--end of our student registration form-->
  </div>
+
  <script src="script.js"></script>
 </body>
 </html>
