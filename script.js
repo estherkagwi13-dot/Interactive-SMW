@@ -15,7 +15,7 @@ function getPerformance(marks){
         return "Failed"
     }
 }
-
+//students display
 function displayStudents(listToShow=students){
     const tbody =document.getElementById("records-body")
     const noRecords = document.getElementById("no-records")
@@ -219,5 +219,30 @@ function updateMarks(id){
     refreshPage()
     }
 
+//contact form js
+const contactForm = document.getElementById("contact-form")
 
+if (contactForm){
+    contactForm.addEventListener("submit", function (event){
+        event.preventDefault()
+        const name= document.getElementById("contact-name").value.trim()
+        const email= document.getElementById("contact-email").value.trim()
+        const text=document.getElementById("contact-message").value.trim()
+        const feedback=document.getElementById("contact-feedback")
+
+        if(name===""||email===""|| text===""){
+            feedback.textContent="Please fill in all the fields"
+            feedback.className="error"
+            return
+        }
+        if(!email.includes("@")|| !email.includes(".")){
+            feedback.textContent="Please enter a valid email address"
+            feedback.className="error"
+            return
+        }
+        feedback.textContent="Thank", +name + "Your Your Message has been sent."
+        feedback.className="success"
+        contactForm.reset()
+    })
+}
 
