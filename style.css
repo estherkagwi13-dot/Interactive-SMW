@@ -1,15 +1,33 @@
 * {
   box-sizing: border-box;
+  padding: 0%;
+  margin: 0;
 }
+
 
 body {
   font-family: Arial, sans-serif;
   background-color: #e1d3a9;
   color: black;
   margin: 0;
-  padding: 20px;
 }
 
+nav{
+  background-color: #c53030;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 0px;
+    margin: 0;
+    }
+
+nav a:hover{
+    color: rgb(202, 117, 145);
+    transition: 0.3s;
+}
+a{
+    text-decoration: none;
+   }
 #dashboard,
 #records {
   background-color: #c0aa8a;
@@ -113,4 +131,27 @@ button:hover {
 .success {
   color: #2f855a;
   font-weight: bold;
+}
+
+footer-links{
+  margin: 0;
+}
+  
+
+
+
+footer-links a{
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+
+}
+
+footer{
+  background-color: #d33c16;
+  color: #ffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+
 }
